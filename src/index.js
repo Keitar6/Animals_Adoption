@@ -5,7 +5,8 @@ import ThemeContext from "./ThemeContext";
 import SearchParams from "./SearchParams";
 import Details from "./Detail";
 import Biklak from "./Biklak";
-const RApp = () => {
+import './style.css'
+const App = () => {
   const theme = useState("#ff4e60");
   return (
     <StrictMode>
@@ -26,4 +27,4 @@ const RApp = () => {
   );
 };
 
-render(<RApp />, document.getElementById("root"));
+render(<App />, document.getElementById("root"));
