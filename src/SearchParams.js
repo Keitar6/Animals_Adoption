@@ -15,14 +15,13 @@ const SearchParams = () => {
   const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
-    // uruchamia się po renderowaniu, a raczej czeka aż się coś stanie, najpierw na koniec pierwszego renderu
+
     requestPets();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  // arrey of dependend variables, jak chcemy wywołać raz po renderowaniu pierszym to zostawiamy puste, jak wstawimy tam jakieś coś to wtedy przy każdej zmianie tego czegoś. Jak nie damy nic, w sensie nic nie będzie po przecinku to uruchamia się przy każdej zmianie
+
 
   async function requestPets() {
     const res = await fetch(
-      // await sprawia, że czekamy aż fetch się wykona. Sam fetch jest coś jak promise, a await sprawia że czekasz aż promise się wykona.
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
     );
     const json = await res.json();
@@ -33,7 +32,7 @@ const SearchParams = () => {
     <div className="search-params">
       <form
         onSubmit={(event) => {
-          event.preventDefault(); // odświeża stronę jak tego nie ma
+          event.preventDefault();
           requestPets();
         }}
       >

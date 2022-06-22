@@ -1,4 +1,3 @@
-// import { Component } from "react";
 import React from "react";
 
 class Carousel extends React.Component {
@@ -13,7 +12,7 @@ class Carousel extends React.Component {
   handleIndexClick = (event) => {
     console.log(this);
     this.setState({
-      active: +event.target.dataset.index, // konwertowanie w liczbę
+      active: +event.target.dataset.index,
     });
   };
   render() {

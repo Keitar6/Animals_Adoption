@@ -5,7 +5,6 @@ import ThemeContext from "./ThemeContext";
 import SearchParams from "./SearchParams";
 import Details from "./Detail";
 import Biklak from "./Biklak";
-// Twworzenie komponentu App --> JSX
 const RApp = () => {
   const theme = useState("#ff4e60");
   return (
@@ -28,24 +27,3 @@ const RApp = () => {
 };
 
 render(<RApp />, document.getElementById("root"));
-// Twworzenie komponentu App --> BEZ JSX
-// const App = () => {
-//   return React.createElement("div", {}, [
-//     React.createElement("h1", {}, "Adopt Me!"),
-//     React.createElement(Pet, {
-//       name: "Sonia",
-//       animal: "Dog",
-//       breed: "Puddel",
-//     }),
-//     React.createElement(Pet, {
-//       name: "Pancho",
-//       animal: "Horse",
-//       breed: "Mix",
-//     }),
-//     React.createElement(Pet, {
-//       name: "Leon",
-//       animal: "Dog",
-//       breed: "Beagle",
-//     }),
-//   ]);
-// };
