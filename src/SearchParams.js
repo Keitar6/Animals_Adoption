@@ -15,14 +15,13 @@ const SearchParams = () => {
   const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
-
     requestPets();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   async function requestPets() {
     const res = await fetch(
-      `/petsapi/pets?/animal=${animal}&location=${location}&breed=${breed}`
+      `/petsapi/pets?/animal=dog&location=''&breed=''`
     );
     const json = await res.json();
     setPets(json.pets);
