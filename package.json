@@ -2,7 +2,8 @@
   "name": "dogs",
   "version": "0.1.0",
   "description": "",
-  "main": "index.html",
+  
+  "source": "src/index.html",
   "scripts": {
     "dev": "parcel src/index.html",
     "start": "parcel",
