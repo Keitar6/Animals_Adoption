@@ -1,11 +1,10 @@
-import { useState, useEffect, useContext } from "react"; // importowwanie hooków, zawsze zaczynają się od use
+import { useState, useEffect, useContext } from "react";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
 import ThemeContext from "./ThemeContext";
 const ANIMALS = ["bird", "dog", "cat", "reptile", "rabbit"];
 
 const SearchParams = () => {
-  //   const location = " Strzelin, Rynek";
   const [location, setLocation] = useState("");
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
@@ -23,7 +22,7 @@ const SearchParams = () => {
   async function requestPets() {
     console.log(pets)
     const res = await fetch(
-      `/users/pets?animal=dog&location=&breed=`
+      `http://pets-v2.dev-apis.com/pets?animal=dog&location=&breed=`
     );
     const json = await res.json();
     setPets(json.pets);
