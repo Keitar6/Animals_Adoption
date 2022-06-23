@@ -165,7 +165,7 @@ window.addEventListener("parcelhmraccept", ()=>{
 
 },{"react-refresh/runtime":"786KC","react-error-overlay":"1dldy"}],"786KC":[function(require,module,exports) {
 "use strict";
-module.exports = require("./cjs/react-refresh-runtime.development.js");
+module.exports = require("./cjs/react-refresh-runtime.development.js.js");
 
 },{"./cjs/react-refresh-runtime.development.js":"hdge7"}],"hdge7":[function(require,module,exports) {
 /** @license React vundefined
@@ -2758,7 +2758,7 @@ $RefreshReg$(_c, "RApp");
 }
 },{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./SearchParams":"gR5jP","./Detail":"5647k","react":"21dqq","./Biklak":"fgF1Y","./ThemeContext":"4b9qW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
-module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
+module.exports = require("./cjs/react-jsx-dev-runtime.development.js.js");
 
 },{"./cjs/react-jsx-dev-runtime.development.js":"48uCM"}],"48uCM":[function(require,module,exports) {
 /**
@@ -3588,7 +3588,7 @@ module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
 },{"react":"21dqq"}],"21dqq":[function(require,module,exports) {
 "use strict";
-module.exports = require("./cjs/react.development.js");
+module.exports = require("./cjs/react.development.js.js");
 
 },{"./cjs/react.development.js":"6YvXz"}],"6YvXz":[function(require,module,exports) {
 /**
@@ -5465,7 +5465,7 @@ function checkDCE() {
     // a false positive.
     throw new Error("^_^");
 }
-module.exports = require("./cjs/react-dom.development.js");
+module.exports = require("./cjs/react-dom.development.js.js");
 
 },{"./cjs/react-dom.development.js":"3iA9v"}],"3iA9v":[function(require,module,exports) {
 /**
@@ -26352,7 +26352,7 @@ module.exports = require("./cjs/react-dom.development.js");
 
 },{"react":"21dqq","scheduler":"juvHo"}],"juvHo":[function(require,module,exports) {
 "use strict";
-module.exports = require("./cjs/scheduler.development.js");
+module.exports = require("./cjs/scheduler.development.js.js");
 
 },{"./cjs/scheduler.development.js":"RqdIf"}],"RqdIf":[function(require,module,exports) {
 /**
