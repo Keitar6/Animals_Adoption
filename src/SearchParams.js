@@ -21,11 +21,13 @@ const SearchParams = () => {
 
 
   async function requestPets() {
+    console.log(pets)
     const res = await fetch(
       `/users/pets?animal=dog&location=&breed=`
     );
     const json = await res.json();
     setPets(json.pets);
+    console.log(pets)
   }
 
   return (
