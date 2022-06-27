@@ -18,13 +18,13 @@ const SearchParams = () => {
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	async function requestPets() {
-		console.log(pets);
+		// console.log(pets);
 		const res = await fetch(
-			`petsapi/pets?animal=${animal}&location=${location}&breed=${breed}`
+			`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
 		);
-		console.log(res);
+		// console.log(res);
 		const json = await res.json();
-		console.log(json.pets);
+		// console.log(json.pets);
 		setPets(json.pets);
 	}
 
