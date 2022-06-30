@@ -9,11 +9,9 @@ class Details extends Component {
 	state = { loading: true, showModal: false };
 
 	async componentDidMount() {
-		const res = await fetch(
-			`petsapi?id=${this.props.params.id}`
-		);
+		const res = await fetch(`petapi=${this.props.params.id}`);
 		const json = await res.json();
-
+		console.log(await json);
 		this.setState(Object.assign({ loading: false }, json.pets[0]));
 	}
 
