@@ -15,49 +15,49 @@ const petFinderSecret = "UzK0CbLaAKpeS58xAK1JauQmGxxwuibTx7PbmXPV";
 const App = () => {
 	const theme = useState("#ff4e60");
 	const [results, setResults] = useState(null);
-	const accessToken = useContext(AuthContext);
-	const [authToken, setAuthToken] = useState("");
-	useEffect(() => {
-		// Fetching access token
-		(async () => {
-			const params = new URLSearchParams();
-			params.append("grant_type", "client_credentials");
-			params.append("client_id", petFinderKey);
-			params.append("client_secret", petFinderSecret);
+	// const accessToken = useContext(AuthContext);
+	// const [authToken, setAuthToken] = useState("");
+	// useEffect(() => {
+	// 	// Fetching access token
+	// 	(async () => {
+	// 		const params = new URLSearchParams();
+	// 		params.append("grant_type", "client_credentials");
+	// 		params.append("client_id", petFinderKey);
+	// 		params.append("client_secret", petFinderSecret);
 
-			const res = await fetch("https://api.petfinder.com/v2/oauth2/token", {
-				method: "POST",
-				body: params,
-			}).then((data) => data.json());
-			const { access_token } = res;
-			// console.log(await access_token);
-			setAuthToken(access_token)
-		})();
-	}, []);
-	useEffect(() => {
-		console.log(accessToken);
-		//Fetching animals
-		if (accessToken === null) {
-			console.log(`Niepoprawny access token`);
-			return;
-		}
+	// 		const res = await fetch("https://api.petfinder.com/v2/oauth2/token", {
+	// 			method: "POST",
+	// 			body: params,
+	// 		}).then((data) => data.json());
+	// 		const { access_token } = res;
+	// 		// console.log(await access_token);
+	// 		setAuthToken(access_token)
+	// 	})();
+	// }, []);
+	// useEffect(() => {
+	// 	console.log(accessToken);
+	// 	//Fetching animals
+	// 	if (accessToken === null) {
+	// 		console.log(`Niepoprawny access token`);
+	// 		return;
+	// 	}
 
-		const fetchPets = async () => {
-			const petResults = await fetch("https://api.petfinder.com/v2/animals", {
-				headers: {
-					Authorization: `Bearer ${accessToken}`,
-				},
-			});
-			const json = await petResults.json();
-			setResults(json.animals);
-		};
-		fetchPets();
-		console.log(`Dane od petfinder:  ${results}`);
-	}, [accessToken, results]);
+		// const fetchPets = async () => {
+		// 	const petResults = await fetch("https://api.petfinder.com/v2/animals", {
+		// 		headers: {
+		// 			Authorization: `Bearer ${accessToken}`,
+		// 		},
+		// 	});
+		// 	const json = await petResults.json();
+		// 	setResults(json.animals);
+		// };
+		// fetchPets();
+		// console.log(`Dane od petfinder:  ${results}`);
+	// }, [accessToken, results]);
 
 	return (
 		<StrictMode>
-			<AuthContext.Provider>
+			{/* <AuthContext.Provider> */}
 				<ThemeContext.Provider value={theme}>
 					<BrowserRouter>
 						<header>
@@ -70,7 +70,7 @@ const App = () => {
 						</Routes>
 					</BrowserRouter>
 				</ThemeContext.Provider>
-			</AuthContext.Provider>
+			{/* </AuthContext.Provider> */}
 		</StrictMode>
 	);
 };

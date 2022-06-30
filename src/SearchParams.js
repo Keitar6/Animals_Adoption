@@ -20,7 +20,7 @@ const SearchParams = () => {
 	async function requestPets() {
 		// console.log(pets);
 		const res = await fetch(
-			`petsapi/pets?animal=${animal}&location=${location}&breed=${breed}`
+			`petsapi?animal=${animal}&location=${location}&breed=${breed}`
 		);
 		// console.log(res);
 		const json = await res.json();
