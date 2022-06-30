@@ -25,7 +25,7 @@ export default function useBreedList(animal) {
       setStatus("loading");
 
       const res = await fetch(
-        `http://pets-v2.dev-apis.com/breeds?animal=${animal}`
+        `breedsapi?animal=${animal}`
       );
       const json = await res.json();
       // console.log(json);
